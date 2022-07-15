@@ -6,10 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'basics';
+  currentDate = new Date();
+  name:string='jonas';
+  imgURL:string='https://picsum.photos/id/237/200/300';
+  images = [
+    'https://picsum.photos/id/237/200/300',
+    'https://picsum.photos/id/237/200/300',
+    'https://picsum.photos/id/237/200/300'
+  ]
+  cost = 2000;
+  temperature = 25.3;
+  pizza ={
+    toppings: ['pepperoni', 'bacon'],
+    size: 'large'
+  }
+  blueClass = false;
+  fontSize = 16;
 
-  name:string='Jonas';
-  imgURL:string='https://picsum.photos/id/237/200/300'
 
   changeImage(e: KeyboardEvent) {
     return this.imgURL=(e.target as HTMLInputElement).value;
@@ -18,4 +31,6 @@ export class AppComponent {
   logImg(event:string) {
     console.log(event);
   }
+
+
 }
